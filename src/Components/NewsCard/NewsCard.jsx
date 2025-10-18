@@ -1,14 +1,14 @@
 import React from "react";
-import { FaStar, FaRegEye, FaShareAlt } from "react-icons/fa";
+import { FaStar, FaRegEye, FaShareAlt, FaRegBookmark } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const NewsCard = ({ news }) => {
   const { title, author, thumbnail_url, details, rating, total_view } = news;
 
   return (
-    <div className="card bg-base-100 shadow-md rounded-xl overflow-hidden hover:shadow-lg transition mx-5 mb-3">
+    <div className="card mt-2 bg-base-100 shadow-md rounded-xl overflow-hidden hover:shadow-lg transition  mb-3">
       {/* Author Section */}
-      <div className="flex justify-between items-center p-4">
+      <div className="flex justify-between items-center p-4 bg-[#F3F3F3]">
         <div className="flex items-center gap-3">
           <img
             src={author.img}
@@ -22,7 +22,8 @@ const NewsCard = ({ news }) => {
             </p>
           </div>
         </div>
-        <button className="btn btn-ghost btn-sm text-gray-600">
+        <button className=" flex justify-center items-center gap-2 text-lg cursor-pointer text-gray-600">
+          <FaRegBookmark />
           <FaShareAlt />
         </button>
       </div>
